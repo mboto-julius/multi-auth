@@ -19,7 +19,7 @@
                 {{ Session::get('success') }}
             </div>
             @endif
-            <form action="" method="POST">
+            <form action="{{ route('login.submit') }}" method="POST">
                 @csrf
                 <div class="card">
                     <div class="card-header">

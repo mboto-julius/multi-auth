@@ -24,17 +24,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">About</a>
                     </li>
-                    @guest('admin')
+                    @if (!Auth::guard('admin')->check() && !Auth::guard('web')->check())
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
-                    @endguest
+                    @endif
                     @auth('admin')
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('admin.logout') }}">Logout</a>
+                    </li>
+                    @endauth
+                    @auth('web')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                     </li>
                     @endauth
                 </ul>

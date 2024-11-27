@@ -13,7 +13,7 @@ Route::middleware('admin')->prefix('admin')->group(function () {
 Route::prefix('admin')->group(function () {
     Route::controller(AdminAuthController::class)->group(function () {
         Route::view('login', 'admin.auths.login')->name('admin.login');
-        Route::post('login', 'loginSubmit')->name('admin.login_submit');
+        Route::post('login', 'login')->name('admin.login_submit');
         Route::view('forget-password', 'admin.auths.forget-password')->name('admin.forget_password');
         Route::post('forget-password-submit', 'forgetPasswordSubmit')->name('admin.forget_password_submit');
         Route::get('reset-password/{token}', 'resetPassword')->name('admin.reset_password');
