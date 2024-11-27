@@ -21,7 +21,7 @@
                         </div>
                         @endif
 
-                        <form action="" method="POST">
+                        <form action="{{ route('reset.password_submit') }}" method="POST">
                             @csrf
                             <input type="hidden" name="token" value="{{ $tokenInfo->token }}">
 
@@ -63,7 +63,6 @@
                                 </button>
                             </div>
                         </form>
-
                     </div>
                 </div>
             </div>
