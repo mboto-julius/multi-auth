@@ -8,7 +8,6 @@ This project demonstrates a simple and efficient implementation of multi-authent
 -   **Role-Specific Dashboards**: Users are redirected to their respective dashboards upon login.
 -   **Middleware Protection**: Middleware is used to protect routes specific to each user type.
 -   **Custom Login Views**: Custom login forms for different user types.
--   **Easy Extendability**: Add new user roles and guards without major changes to the codebase.
 
 ## How It Works
 
